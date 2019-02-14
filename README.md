@@ -11,8 +11,8 @@
 - Grafana analytics and monitoring: https://grafana.fptu.tech/
     - AWS EC2 Server: http://54.179.166.164/
     - AWS RDS Server: http://dms.cfszgusygva5.ap-southeast-1.rds.amazonaws.com:3306
-    
-![Terinal](https://i.imgur.com/P1d8xjv.png)
+- EC2 resource usage:
+![Terminal](https://i.imgur.com/O8PxyA1.png)
 
 ## Requirements and Functions to be implemented:
 - App must has a `user board` and `admin board`.

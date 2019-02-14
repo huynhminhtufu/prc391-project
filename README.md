@@ -1,6 +1,14 @@
-## `FPTU dot Tech` Requirement Analysis & Technical Architect Document
+## `PRC391 Project` Requirement Analysis & Technical Architect Document
 
 ![FPTU](https://i.imgur.com/Y9AIFBR.png)
+
+### App ecosystem:
+- Web App (production): https://fptu.tech (Production for end-users)
+- Web App (staging): http://staging.fptu.tech (Support debug by source-map)
+- JSON API Gateway (production): https://api.fptu.tech
+- Jenkins CI/CD: https://cicd.fptu.tech
+- AWS EC2 Server: http://54.179.166.164/
+- AWS RDS Server: http://dms.cfszgusygva5.ap-southeast-1.rds.amazonaws.com:3306
 
 ## Requirements and Functions to be implemented:
 - App must has a `user board` and `admin board`.
@@ -13,8 +21,8 @@
 `Need to update more about business analysis and entity diagrams here`: Tri
 
 ## Scalable Architecture: Microservices
-- System Architect is based on scaling Microservices technologies.
-- Everything in system is a container (Dockerized), and be able to run on a Kubernetes Cluster (Google Kubernetes Engine with Load Balancer).
+- System Architect is based on scaling `Microservices` principles.
+- Everything in system is a Docker image (Dockerized), and be able to run on a Kubernetes Cluster (Google Kubernetes Engine with Load Balancer) as a `container`.
 - How it scale: GKE Cluster managed, the system will auto scale up or scale down the instances to match up with the traffic.
 - **Backend** implements several services to handle all actions: User API, Confession API, DMS (create & excute query). Communication between internal services use **high performance gRPC** (http/2) with Protobuf.
 - **Frontend** implements with Single Page Application, based `Universal Web App` and `Progressive Web App`. Implement a **Javascript SDK** separated to wrap Service Caller, easy hand-on and maintainance.
@@ -50,7 +58,9 @@
     - `axios` for XHR maker
     - `webpack` for bundle
 - Infrastructure
+    - `Cloudflare` for DNS (resolve server IP) and CDN (caching)
     - `Docker` eco-system, every repos have a `Dockerfile` for container deployment
+    - `Nginx` for reverse proxy, resolve services from docker containers
     - `Jenkins` for CI/CD integrate
     - `Amazon EC2` with Ubuntu 18.04 LTS (free-tier package 1GB RAM, 1CPU)
     - `Amazon RC2` for SQL serving (free-tier package)
@@ -75,6 +85,7 @@
 - Build up codebase for Frontend system: `Thanh`
 - Documenting, visual relation entities, diagrams and documenting: `Tri`
 - Create deployment, build script, infrastructure, Amazon EC2, RDS, Firebase: `Tu`
+- Create domain, DNS to Cloudflare, mapping to Nginx proxy: `Tu`
 #### Sprint 2 (15-2-2019 -> 21-2-2019): Develop user board
 - Build and implement APIs for user board, CRUD & Search: `Tu`, `Tri`
 - Build up UI and design forms, apply APIs for user board: `Thanh`

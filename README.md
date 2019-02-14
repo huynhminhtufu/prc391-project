@@ -22,9 +22,9 @@
 
 ## Scalable Architecture: Microservices
 - System Architect is based on scaling `Microservices` principles.
-- Everything in system is a Docker image (Dockerized), and be able to run on a Kubernetes Cluster (Google Kubernetes Engine with Load Balancer) as a `container`.
-- How it scale: GKE Cluster managed, the system will auto scale up or scale down the instances to match up with the traffic.
-- **Backend** implements several services to handle all actions: User API, Confession API, DMS (create & excute query). Communication between internal services use **high performance gRPC** (http/2) with Protobuf.
+- Everything in system is a Docker image (Dockerized), and be able to run on a Kubernetes Cluster (Google Kubernetes Engine with Load Balancer) as `containers` with specific `environment variables`.
+- How it scale: Google Kubernetes Engine (GKE) Cluster managed, the system will auto scale up or scale down the containers (nodes) to match up with the traffic, due to our configurations.
+- **Backend** implements several services to handle all actions: User API, Confession API, DMS (Database Management System which create & excute query). Communication between internal services use **high performance gRPC** (http/2) with Protobuf (binary buffer).
 - **Frontend** implements with Single Page Application, based `Universal Web App` and `Progressive Web App`. Implement a **Javascript SDK** separated to wrap Service Caller, easy hand-on and maintainance.
     - Technical Paper: [How we build scalable React app in FPTU.tech from scratch](https://kipalog.com/posts/Thiet-ke-scalable-React-App-tu-dau)
 - **Database** implemented with MySQL Server (RDBMS) and Google Firebase Database (NoSQL).
@@ -63,7 +63,7 @@
     - `Nginx` for reverse proxy, resolve services from docker containers
     - `Jenkins` for CI/CD integrate
     - `Amazon EC2` with Ubuntu 18.04 LTS (free-tier package 1GB RAM, 1CPU)
-    - `Amazon RC2` for SQL serving (free-tier package)
+    - `Amazon RDS` for SQL serving (free-tier package)
     - Google `Firebase` SDK for Firebase Database (free package)
     - Be able to run in a Google Kubernetes Cluster when demo scale (free $300)
     - `Pingdom` to monitor uptime service and `Slack` to push notification
@@ -71,7 +71,7 @@
 ![React+Golang](https://media.licdn.com/dms/image/C5116AQHJEYOPh4eo5w/profile-displaybackgroundimage-shrink_350_1400/0?e=1554940800&v=beta&t=-uJ3wDvSKNW5TJU2VCBBuCnDXurhvWeaDQpa1ncdrMA)
 
 ## Development Toolkit
-- Git version control with Github account
+- Git version control with a Github account to access repos
 - Go Enviroment v1.2 with GOHOME, GOBIN and `godep`
 - Node.js Environment latest with `yarn` installed
 - Docker CE latest (Minikube or MiniK8s for Kubernetes Cluster development)

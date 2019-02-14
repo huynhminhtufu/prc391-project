@@ -53,7 +53,7 @@
     - `Docker` eco-system, every repos have a `Dockerfile` for container deployment
     - `Jenkins` for CI/CD integrate
     - `Amazon EC2` with Ubuntu 18.04 LTS (free-tier package 1GB RAM, 1CPU)
-    - `Amazon RDS` for SQL serving (free-tier package)
+    - `Amazon RC2` for SQL serving (free-tier package)
     - Google `Firebase` SDK for Firebase Database (free package)
     - Be able to run in a Google Kubernetes Cluster when demo scale (free $300)
     - `Pingdom` to monitor uptime service and `Slack` to push notification
@@ -71,7 +71,15 @@
 ## Details Workflow (updated 14-02-2019)
 
 ### Sprint & Backlogs
-- Updating
-
+#### Sprint 1 (7-2-2019 -> 14-2-2019): Build up code base
+- Build up codebase for Backend system: `Tu`
+- Build up codebase for frontend system: `Thanh`
+- Documenting, visual relation entities and documenting: `Tri`
+- Create deployment, build script, infrastructure: `Tu`
+#### Sprint 2 (15-2-2019 -> 21-2-2019)
+- Build and implement APIs for user board, CRUD & Search: `Tu`, `Tri`
+- Build up UI and design forms, apply APIs for user board: `Thanh`
+- Update documents, requirements, diagrams: `Tri`
+- First deploy - monito CI/CD, server: `Tu`
 ### Issues
 - None

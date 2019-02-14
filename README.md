@@ -97,7 +97,7 @@ Need `Tri` to update.
 - Build up UI and design forms, apply APIs for user board: `Thanh`
 - Update documents, requirements, diagrams: `Tri`
 - First deploy - monitor CI/CD, server: `Tu`
-#### Sprint 2 (22-2-2019 -> 29-2-2019): Develop admin board
+#### Sprint 3 (22-2-2019 -> 29-2-2019): Develop admin board
 - Updating...
 ### Issues
 - None

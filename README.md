@@ -48,6 +48,8 @@ Need `Tri` to update.
     - Deployed on a **Amazon EC2** VM with Docker eco-system and Nginx.
     - Can be deployed on a Container Cluster system (with Kubernetes) if need scaling.
     - Server uptime monitor and notice via Slack when down.
+    
+![Architect](https://i.imgur.com/kzOkhqJ.jpg)
 
 ![Microservice Protobuf](https://i.imgur.com/Owb8Jgk.png)
 

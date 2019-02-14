@@ -5,10 +5,12 @@
 ### App ecosystem:
 - Web App (production): https://fptu.tech (Production for end-users)
 - Web App (staging): http://staging.fptu.tech (Support debug by source-map)
+- JS SDK Serving Server: https://sdk.fptu.tech/fptu-sdk.js (Static Nginx)
 - JSON API Gateway (production): https://api.fptu.tech
 - Jenkins CI/CD: https://cicd.fptu.tech
-- AWS EC2 Server: http://54.179.166.164/
-- AWS RDS Server: http://dms.cfszgusygva5.ap-southeast-1.rds.amazonaws.com:3306
+- Grafana analytics and monitoring: https://grafana.fptu.tech/
+    - AWS EC2 Server: http://54.179.166.164/
+    - AWS RDS Server: http://dms.cfszgusygva5.ap-southeast-1.rds.amazonaws.com:3306
 
 ## Requirements and Functions to be implemented:
 - App must has a `user board` and `admin board`.
@@ -20,8 +22,12 @@
 
 `Need to update more about business analysis and entity diagrams here`: Tri
 
+## Entity Diagram
+
+Need `Tri` to update.
+
 ## Scalable Architecture: Microservices
-- System Architect is based on scaling `Microservices` principles.
+- Software Architect is based on scaling `Microservices` principles.
 - Everything in system is a Docker image (Dockerized), and be able to run on a Kubernetes Cluster (Google Kubernetes Engine with Load Balancer) as `containers` with specific `environment variables`.
 - How it scale: Google Kubernetes Engine (GKE) Cluster managed, the system will auto scale up or scale down the containers (nodes) to match up with the traffic, due to our configurations.
 - **Backend** implements several services to handle all actions: User API, Confession API, DMS (Database Management System which create & excute query). Communication between internal services use **high performance gRPC** (http/2) with Protobuf (binary buffer).
@@ -57,7 +63,7 @@
     - Pure `TypeScript`
     - `axios` for XHR maker
     - `webpack` for bundle
-- Infrastructure
+- Infrastructure: `Docker`
     - `Cloudflare` for DNS (resolve server IP) and CDN (caching)
     - `Docker` eco-system, every repos have a `Dockerfile` for container deployment
     - `Nginx` for reverse proxy, resolve services from docker containers
@@ -70,7 +76,7 @@
 
 ![React+Golang](https://media.licdn.com/dms/image/C5116AQHJEYOPh4eo5w/profile-displaybackgroundimage-shrink_350_1400/0?e=1554940800&v=beta&t=-uJ3wDvSKNW5TJU2VCBBuCnDXurhvWeaDQpa1ncdrMA)
 
-## Development Toolkit
+## Development Toolkits:
 - Git version control with a Github account to access repos
 - Go Enviroment v1.2 with GOHOME, GOBIN and `godep`
 - Node.js Environment latest with `yarn` installed
@@ -91,5 +97,7 @@
 - Build up UI and design forms, apply APIs for user board: `Thanh`
 - Update documents, requirements, diagrams: `Tri`
 - First deploy - monitor CI/CD, server: `Tu`
+#### Sprint 2 (22-2-2019 -> 29-2-2019): Develop admin board
+- Updating...
 ### Issues
 - None

@@ -10,7 +10,7 @@
 - App must has a page to fetch all university related articles (crawl) for user to quick view, and also be able to comment on those articles.
 - App must be able to run in both Desktop and Mobile web.
 
-`Need to update more about business logic here`.
+`Need to update more about business analysis and entity diagrams here`: Tri
 
 ## Scalable Architecture: Microservices
 - System Architect is based on scaling Microservices technologies.
@@ -69,17 +69,16 @@
 - MySQL Server 5.2 and MySQL Workbench (client)
 
 ## Details Workflow (updated 14-02-2019)
-
-### Sprint & Backlogs
+### Sprint & Backlogs (sprint lasts 1 week)
 #### Sprint 1 (7-2-2019 -> 14-2-2019): Build up code base
 - Build up codebase for Backend system: `Tu`
-- Build up codebase for frontend system: `Thanh`
-- Documenting, visual relation entities and documenting: `Tri`
-- Create deployment, build script, infrastructure: `Tu`
-#### Sprint 2 (15-2-2019 -> 21-2-2019)
+- Build up codebase for Frontend system: `Thanh`
+- Documenting, visual relation entities, diagrams and documenting: `Tri`
+- Create deployment, build script, infrastructure, Amazon EC2, RDS, Firebase: `Tu`
+#### Sprint 2 (15-2-2019 -> 21-2-2019): Develop user board
 - Build and implement APIs for user board, CRUD & Search: `Tu`, `Tri`
 - Build up UI and design forms, apply APIs for user board: `Thanh`
 - Update documents, requirements, diagrams: `Tri`
-- First deploy - monito CI/CD, server: `Tu`
+- First deploy - monitor CI/CD, server: `Tu`
 ### Issues
 - None

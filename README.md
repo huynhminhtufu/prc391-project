@@ -14,17 +14,24 @@
 - EC2 resource usage:
 ![Terminal](https://i.imgur.com/O8PxyA1.png)
 
-## Requirements and Functions to be implemented:
+## Requirements (based on User's stories) and Functions to be implemented:
 - App must has a `user board` and `admin board`.
+- App must be designed a easy UI for users to post their confession, with image upload available.
 - App must be designed to help Confessions Facebook fan page managers easily manage the contents, automatic schedule and posting to Facebook.
 - App must has a communication system for administrators to feedback about the user's confessions and postback their request.
+- App must have web push notification system to notice to users that their confessions was approved.
 - App must has list & history of all confession, has a clear visual or analyst board of total sent confession and which posted on Facebook.
 - App must has a page to fetch all university related articles (crawl) for user to quick view, and also be able to comment on those articles.
 - App must be able to run in both Desktop and Mobile web.
+- App must be implement a anti-spam system.
 
 `Need to update more about business analysis and entity diagrams here`: Tri
 
 ## Entity Diagram
+
+Need `Tri` to update.
+
+## Database Diagram
 
 Need `Tri` to update.
 
@@ -57,10 +64,13 @@ Need `Tri` to update.
     - `memcached` implement for server-side caching
     - `golang/protobuf` for protocol buffers
     - `golang/grpc` for gRPC implement, inter-service commucate
+    - `google/recaptcha` to implement anti-spam system
 - Frontend: `React` (for single page application)
     - `React 16` with `react-router`, `redux`
     - Pure Node.js `Express` for Server-side rendering
     - `webpack` and `babel` for bundle and code chunking
+    - Use `firebase-sdk` to implement `Cloud Message Push Notification`
+    - Use `firebase-sdk` to implement `Firebase Storage for Store Images`
 - Javascript SDK for APIs implement:
     - Pure `TypeScript`
     - `axios` for XHR maker

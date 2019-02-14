@@ -32,7 +32,7 @@
 
 ## Technical Stack:
 
-![React+Golang](https://media.licdn.com/dms/image/C5116AQHJEYOPh4eo5w/profile-displaybackgroundimage-shrink_350_1400/0?e=1554940800&v=beta&t=-uJ3wDvSKNW5TJU2VCBBuCnDXurhvWeaDQpa1ncdrMA)
+![Stack](https://i.imgur.com/suESnir.png)
 
 - Backend: `Golang` (for high performance APIs)
     - Pure Go codebase
@@ -57,6 +57,16 @@
     - Google `Firebase` SDK for Firebase Database (free package)
     - Be able to run in a Google Kubernetes Cluster when demo scale (free $300)
     - `Pingdom` to monitor uptime service and `Slack` to push notification
+
+![React+Golang](https://media.licdn.com/dms/image/C5116AQHJEYOPh4eo5w/profile-displaybackgroundimage-shrink_350_1400/0?e=1554940800&v=beta&t=-uJ3wDvSKNW5TJU2VCBBuCnDXurhvWeaDQpa1ncdrMA)
+
+## Development Toolkit
+- Git version control with Github account
+- Go Enviroment v1.2 with GOHOME, GOBIN and `godep`
+- Node.js Environment latest with `yarn` installed
+- Docker CE latest (Minikube or MiniK8s for Kubernetes Cluster development)
+- Visual Studio Code latest (+ ESLint Plugin)
+- MySQL Server 5.2 and MySQL Workbench (client)
 
 ## Details Workflow (updated 14-02-2019)
 

@@ -25,15 +25,13 @@
 - App must be able to run in both Desktop and Mobile web.
 - App must be implement a anti-spam system.
 
-`Need to update more about business analysis and entity diagrams here`: Tri
-
 ## Entity Diagram
 
 ![Entity Diagram](./entity.jpg)
 
 ## Database Diagram
 
-Need `Tri` to update.
+![Use Case Diagram](./use-case.jpg)
 
 ## Scalable Architecture: Microservices
 - Project Architect is based on scaling `Microservices` principles.

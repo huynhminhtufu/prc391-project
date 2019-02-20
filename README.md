@@ -29,7 +29,7 @@
 
 ![Entity Diagram](./entity.jpg)
 
-## Database Diagram
+## Use Case Diagram
 
 ![Use Case Diagram](./use-case.jpg)
 

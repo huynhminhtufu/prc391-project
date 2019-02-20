@@ -2,18 +2,6 @@
 
 ![FPTU](https://i.imgur.com/Y9AIFBR.png)
 
-### App ecosystem:
-- Web App (production): https://fptu.tech (Production for end-users)
-- Web App (staging): http://staging.fptu.tech (Support debug by source-map)
-- JS SDK Serving Server: https://sdk.fptu.tech/fptu-sdk.js (Static Nginx)
-- JSON API Gateway (production): https://api.fptu.tech
-- Jenkins CI/CD: https://cicd.fptu.tech
-- Grafana analytics and monitoring: https://grafana.fptu.tech/
-    - AWS EC2 Server: http://54.179.166.164/
-    - AWS RDS Server: http://dms.cfszgusygva5.ap-southeast-1.rds.amazonaws.com:3306
-- EC2 resource usage:
-![Terminal](https://i.imgur.com/O8PxyA1.png)
-
 ## Requirements (based on User's stories) and Functions to be implemented:
 - App must has a `user board` and `admin board`.
 - App must be designed a easy UI for users to post their confession, with image upload available.
@@ -94,6 +82,11 @@
 - Visual Studio Code latest (+ ESLint Plugin)
 - MySQL Server 5.2 and MySQL Workbench (client)
 
+## Team and Main role
+- Front-end: `Thanh`
+- Back-end: `Tri`
+- Back-end & DevOps: `Tu`
+
 ## Details Workflow (updated 14-02-2019)
 ### Sprint & Backlogs (sprint lasts 1 week)
 #### Sprint 1 (7-2-2019 -> 14-2-2019): Build up code base
@@ -102,7 +95,7 @@
 - Documenting, visual relation entities, diagrams and documenting: `Tri`
 - Create deployment, build script, infrastructure, Amazon EC2, RDS, Firebase: `Tu`
 - Create domain, DNS to Cloudflare, mapping to Nginx proxy: `Tu`
-- Finalize entities to Database Design: `Thanh` 
+- Finalize entities to Database Design: `Tri` 
 #### Sprint 2 (15-2-2019 -> 21-2-2019): Develop user board
 - Build and implement APIs for user board, CRUD & Search: `Tu`, `Tri`
     - Send confess APIs
@@ -129,3 +122,15 @@
 - Overall testing: `Tri`, `Thanh`, `Tu`
 ### Issues
 - Research microservice technologies gRPC + protobuf (deadline: 25-02-2019)
+
+### App ecosystem:
+- Web App (production): https://fptu.tech (Production for end-users)
+- Web App (staging): http://staging.fptu.tech (Support debug by source-map)
+- JS SDK Serving Server: https://sdk.fptu.tech/fptu-sdk.js (Static Nginx)
+- JSON API Gateway (production): https://api.fptu.tech
+- Jenkins CI/CD: https://cicd.fptu.tech
+- Grafana analytics and monitoring: https://grafana.fptu.tech/
+    - AWS EC2 Server: http://54.179.166.164/
+    - AWS RDS Server: http://dms.cfszgusygva5.ap-southeast-1.rds.amazonaws.com:3306
+- EC2 resource usage:
+![Terminal](https://i.imgur.com/O8PxyA1.png)

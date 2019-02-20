@@ -82,9 +82,9 @@
 - Visual Studio Code latest (+ ESLint Plugin)
 - MySQL Server 5.2 and MySQL Workbench (client)
 
-## Team and Main role
+## Team and Main roles
 - Front-end: `Thanh`
-- Back-end: `Tri`
+- Back-end & Data: `Tri`
 - Back-end & DevOps: `Tu`
 
 ## Details Workflow (updated 14-02-2019)
@@ -112,8 +112,8 @@
 - Update documents, requirements, diagrams: `Tri
 #### Sprint 4 (30-2-2019 -> 7-3-2019): Microservices chunking
 - Restructure codebase for as Go microservice, add gRPC and protobuf: `Tu`
-- Develop UserAPI, ConfessionAPI: `Tri`
-- Develop UserDMS, ConfessionDMS: `Thanh`
+- Develop UserAPI, ConfessionAPI: `Thanh`
+- Develop UserDMS, ConfessionDMS: `Tri`
 - Develop CrawlWorker, CrawlAPI: `Tu`
 - Develop API Gateway: `Tu`
 #### Sprint 5 (7-3-2019 -> 15-3-2019): Microservices finalize

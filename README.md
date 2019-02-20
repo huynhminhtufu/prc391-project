@@ -36,12 +36,11 @@ Need `Tri` to update.
 Need `Tri` to update.
 
 ## Scalable Architecture: Microservices
-- Software Architect is based on scaling `Microservices` principles.
+- Project Architect is based on scaling `Microservices` principles.
 - Everything in system is a Docker image (Dockerized), and be able to run on a Kubernetes Cluster (Google Kubernetes Engine with Load Balancer) as `containers` with specific `environment variables`.
 - How it scale: Google Kubernetes Engine (GKE) Cluster managed, the system will auto scale up or scale down the containers (nodes) to match up with the traffic, due to our configurations.
-- **Backend** implements several services to handle all actions: User API, Confession API, DMS (Database Management System which create & excute query). Communication between internal services use **high performance gRPC** (http/2) with Protobuf (binary buffer).
-- **Frontend** implements with Single Page Application, based `Universal Web App` and `Progressive Web App`. Implement a **Javascript SDK** separated to wrap Service Caller, easy hand-on and maintainance.
-    - Technical Paper: [How we build scalable React app in FPTU.tech from scratch](https://kipalog.com/posts/Thiet-ke-scalable-React-App-tu-dau)
+- **Backend** implements several services to handle all actions: User API, Confession API, DMS (Database Management System which create & excute query). Communication between internal services use **high performance gRPC** (http/2) with Protobuf (binary proto buffer).
+- **Frontend** implements with Single Page Application, based `Universal Web App` approach. Implement a **Javascript SDK** separated to wrap Service Caller, easy hand-on and maintainance.
 - **Database** implemented with MySQL Server (RDBMS) and Google Firebase Database (NoSQL).
 - **Infrastructure**:
     - **CI/CD** integrated with Jenkins: automatic build & deploy after every commit pushed, 100% up time.
@@ -59,10 +58,9 @@ Need `Tri` to update.
 
 ![Stack](https://i.imgur.com/suESnir.png)
 
-- Backend: `Golang` (for high performance APIs)
+- Backend: `Golang` (for the high performance)
     - Pure Go codebase
     - `gorilla-mux` for Routing and Dispatcher
-    - `gorm` for ORM
     - `memcached` implement for server-side caching
     - `golang/protobuf` for protocol buffers
     - `golang/grpc` for gRPC implement, inter-service commucate
@@ -72,11 +70,11 @@ Need `Tri` to update.
     - Pure Node.js `Express` for Server-side rendering
     - `webpack` and `babel` for bundle and code chunking
     - Use `firebase-sdk` to implement `Cloud Message Push Notification`
-    - Use `firebase-sdk` to implement `Firebase Storage for Store Images`
+    - Use `firebase-sdk` to implement `Firebase Storage for Storing Images`
 - Javascript SDK for APIs implement:
     - Pure `TypeScript`
-    - `axios` for XHR maker
-    - `webpack` for bundle
+    - `axios` for API caller
+    - `webpack` for chunking and bundle
 - Infrastructure: `Docker`
     - `Cloudflare` for DNS (resolve server IP) and CDN (caching)
     - `Docker` eco-system, every repos have a `Dockerfile` for container deployment
@@ -106,12 +104,29 @@ Need `Tri` to update.
 - Documenting, visual relation entities, diagrams and documenting: `Tri`
 - Create deployment, build script, infrastructure, Amazon EC2, RDS, Firebase: `Tu`
 - Create domain, DNS to Cloudflare, mapping to Nginx proxy: `Tu`
+- Finalize entities to Database Design: `Thanh` 
 #### Sprint 2 (15-2-2019 -> 21-2-2019): Develop user board
 - Build and implement APIs for user board, CRUD & Search: `Tu`, `Tri`
+    - Send confess APIs
+    - Fetch confess APIs
+    - Search confess APIs
 - Build up UI and design forms, apply APIs for user board: `Thanh`
 - Update documents, requirements, diagrams: `Tri`
 - First deploy - monitor CI/CD, server: `Tu`
 #### Sprint 3 (22-2-2019 -> 29-2-2019): Develop admin board
-- Updating...
+- Build and implement APIs for admin board, CRUD & Search: `Tu`, `Tri`
+    - Approve confess APIs
+    - Reject confess APIs
+- Build up UI and design forms, apply APIs for admin board: `Thanh`
+- Update documents, requirements, diagrams: `Tri
+#### Sprint 4 (30-2-2019 -> 7-3-2019): Microservices chunking
+- Restructure codebase for as Go microservice, add gRPC and protobuf: `Tu`
+- Develop UserAPI, UserDMS: `Tri`
+- Develop ConfessionAPI, ConfessionDMS: `Thanh`
+- Develop API Gateway: `Tu`
+#### Sprint 5 (7-3-2019 -> 15-3-2019): Microservices finalize
+- Uodating and finailize JavaScript SDK: `Tu`, `Tri`
+- Updating UI and animation: `Thanh`
+- Overall testing: `Tri`, `Thanh`, `Tu`
 ### Issues
-- None
+- Research microservice technologies gRPC + protobuf (deadline: 25-02-2019)

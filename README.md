@@ -121,8 +121,9 @@ Need `Tri` to update.
 - Update documents, requirements, diagrams: `Tri
 #### Sprint 4 (30-2-2019 -> 7-3-2019): Microservices chunking
 - Restructure codebase for as Go microservice, add gRPC and protobuf: `Tu`
-- Develop UserAPI, UserDMS: `Tri`
-- Develop ConfessionAPI, ConfessionDMS: `Thanh`
+- Develop UserAPI, ConfessionAPI: `Tri`
+- Develop UserDMS, ConfessionDMS: `Thanh`
+- Develop CrawlWorker, CrawlAPI: `Tu`
 - Develop API Gateway: `Tu`
 #### Sprint 5 (7-3-2019 -> 15-3-2019): Microservices finalize
 - Uodating and finailize JavaScript SDK: `Tu`, `Tri`

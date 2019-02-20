@@ -29,7 +29,7 @@
 
 ## Entity Diagram
 
-Need `Tri` to update.
+![Entity Diagram](./entity.jpg)
 
 ## Database Diagram
 

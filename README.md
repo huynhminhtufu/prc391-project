@@ -124,6 +124,7 @@
 - Research microservice technologies gRPC + protobuf (deadline: 25-02-2019)
 
 ### App ecosystem:
+- Jira Task Manage: https://jira.gosu.team/secure/Dashboard.jspa
 - Web App (production): https://fptu.tech (Production for end-users)
 - Web App (staging): http://staging.fptu.tech (Support debug by source-map)
 - JS SDK Serving Server: https://sdk.fptu.tech/fptu-sdk.js (Static Nginx)
@@ -136,6 +137,6 @@
 ![Terminal](https://i.imgur.com/O8PxyA1.png)
 
 
-## Go Insider:
+## Go Code Insider:
 ![Handler](./handler.png)
 ![Query](./query.png)

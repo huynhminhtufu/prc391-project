@@ -21,11 +21,11 @@
 
 ![Use Case Diagram](./use-case.jpg)
 
-## Scalable Architecture: Microservices
-- Project Architect is based on scaling `Microservices` principles.
+## Scalable Architecture: Separated Service
+- Project Architect is based on scaling `services` principles.
 - Everything in system is a Docker image (Dockerized), and be able to run on a Kubernetes Cluster (Google Kubernetes Engine with Load Balancer) as `containers` with specific `environment variables`.
 - How it scale: Google Kubernetes Engine (GKE) Cluster managed, the system will auto scale up or scale down the containers (nodes) to match up with the traffic, due to our configurations.
-- **Backend** implements several services to handle all actions: User API, Confession API, DMS (Database Management System which create & excute query). Communication between internal services use **high performance gRPC** (http/2) with Protobuf (binary proto buffer).
+- **Backend** implements several services to handle all actions. High performance and slim with Golang.
 - **Frontend** implements with Single Page Application, based `Universal Web App` approach. Implement a **Javascript SDK** separated to wrap Service Caller, easy hand-on and maintainance.
 - **Database** implemented with MySQL Server (RDBMS) and Google Firebase Database (NoSQL).
 - **Infrastructure**:
@@ -36,10 +36,6 @@
     
 ![Architect](https://i.imgur.com/kzOkhqJ.jpg)
 
-![Microservice Protobuf](https://i.imgur.com/Owb8Jgk.png)
-
-![Flow](https://i.imgur.com/SZw1xuq.png)
-
 ## Technical Stack:
 
 ![Stack](https://i.imgur.com/suESnir.png)
@@ -48,8 +44,6 @@
     - Pure Go codebase
     - `gorilla-mux` for Routing and Dispatcher
     - `memcached` implement for server-side caching
-    - `golang/protobuf` for protocol buffers
-    - `golang/grpc` for gRPC implement, inter-service commucate
     - `google/recaptcha` to implement anti-spam system
 - Frontend: `React` (for single page application)
     - `React 16` with `react-router`, `redux`
@@ -110,21 +104,20 @@
     - Reject confess APIs
 - Build up UI and design forms, apply APIs for admin board: `Thanh`
 - Update documents, requirements, diagrams: `Tri
-#### Sprint 4 (30-2-2019 -> 7-3-2019): Microservices chunking
-- Restructure codebase for as Go microservice, add gRPC and protobuf: `Tu`
+#### Sprint 4 (30-2-2019 -> 7-3-2019): Services chunking
+- Restructure codebase for as seperated services: `Tu`
 - Develop UserAPI, ConfessionAPI: `Thanh`
 - Develop UserDMS, ConfessionDMS: `Tri`
 - Develop CrawlWorker, CrawlAPI: `Tu`
 - Develop API Gateway: `Tu`
-#### Sprint 5 (7-3-2019 -> 15-3-2019): Microservices finalize
+#### Sprint 5 (7-3-2019 -> 15-3-2019): Services finalize
 - Uodating and finailize JavaScript SDK: `Tu`, `Tri`
 - Updating UI and animation: `Thanh`
 - Overall testing: `Tri`, `Thanh`, `Tu`
 ### Issues
-- Research microservice technologies gRPC + protobuf (deadline: 25-02-2019)
+- None
 
 ### App ecosystem:
-- Jira Task Manage: https://jira.gosu.team/secure/Dashboard.jspa
 - Web App (production): https://fptu.tech (Production for end-users)
 - Web App (staging): http://staging.fptu.tech (Support debug by source-map)
 - JS SDK Serving Server: https://sdk.fptu.tech/fptu-sdk.js (Static Nginx)
@@ -135,7 +128,6 @@
     - AWS RDS Server: http://dms.cfszgusygva5.ap-southeast-1.rds.amazonaws.com:3306
 - EC2 resource usage:
 ![Terminal](https://i.imgur.com/O8PxyA1.png)
-
 
 ## Go Code Insider:
 ![Handler](./handler.png)

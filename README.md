@@ -89,7 +89,7 @@
 - Documenting, visual relation entities, diagrams and documenting: `Tri`
 - Create deployment, build script, infrastructure, Amazon EC2, RDS, Firebase: `Tu`
 - Create domain, DNS to Cloudflare, mapping to Nginx proxy: `Tu`
-- Finalize entities to Database Design: `Tri` 
+- Finalize entities to Database Design: `Tri`
 #### Sprint 2 (15-2-2019 -> 21-2-2019): Develop user board
 - Build and implement APIs for user board, CRUD & Search: `Tu`, `Tri`
     - Send confess APIs
@@ -103,17 +103,28 @@
     - Approve confess APIs
     - Reject confess APIs
 - Build up UI and design forms, apply APIs for admin board: `Thanh`
-- Update documents, requirements, diagrams: `Tri
+- Update documents, requirements, diagrams: `Tri`
 #### Sprint 4 (30-2-2019 -> 7-3-2019): Services chunking
 - Restructure codebase for as seperated services: `Tu`
 - Develop UserAPI, ConfessionAPI: `Thanh`
+    - Write controller handler
+    - Write database query with gORM
 - Develop UserDMS, ConfessionDMS: `Tri`
+    - Write controller handler
+    - Write database query with gORM
 - Develop CrawlWorker, CrawlAPI: `Tu`
+    - Write controller handler
+    - Write database query with gORM
 - Develop API Gateway: `Tu`
 #### Sprint 5 (7-3-2019 -> 15-3-2019): Services finalize
 - Uodating and finailize JavaScript SDK: `Tu`, `Tri`
+    - Update finailize environment file with server
 - Updating UI and animation: `Thanh`
+    - Apply Ant Design JS Animation
 - Overall testing: `Tri`, `Thanh`, `Tu`
+    - Write SDK Unit Test by Jest
+    - Testing E2E in Chrome/Firefox
+    - Testing on Mobile/Progressive Web App
 ### Issues
 - None
 

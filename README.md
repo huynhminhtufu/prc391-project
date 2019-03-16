@@ -66,7 +66,7 @@
     - Be able to run in a Google Kubernetes Cluster when demo scale (free $300)
     - `Pingdom` to monitor uptime service and `Slack` to push notification
 
-![React+Golang](https://media.licdn.com/dms/image/C5116AQHJEYOPh4eo5w/profile-displaybackgroundimage-shrink_350_1400/0?e=1554940800&v=beta&t=-uJ3wDvSKNW5TJU2VCBBuCnDXurhvWeaDQpa1ncdrMA)
+![React+Golang](https://scontent.fsgn5-2.fna.fbcdn.net/v/t1.0-9/52527141_1944037459038598_2163240040468054016_o.jpg?_nc_cat=105&_nc_oc=AQlAXOsq7d-7_2ctkrqXdcT-dvEj_lpoIxYGAqlMSGRIWYmyWehrS954204qZ8H8MYA&_nc_ht=scontent.fsgn5-2.fna&oh=691230ad828043a315224a2727381513&oe=5D161053)
 
 ## Development Toolkits:
 - Git version control with a Github account to access repos

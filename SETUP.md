@@ -1,7 +1,7 @@
 ## Setup develop environment for fptu.tech with **Docker**
 
 - Docker CE for Windows [https://docs.docker.com/docker-for-windows/install/](https://docs.docker.com/docker-for-windows/install/)
-=> Git clone source from 3 main repos at [https://github.com/gosu-team](https://github.com/gosu-team)
+- Git clone source code from 3 main repos at [https://github.com/gosu-team](https://github.com/gosu-team)
 
 ### Front-end: Node.js, React, Typescript
 - Build: `docker-compose build`
